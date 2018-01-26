@@ -4,7 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
+    <!--link para el footer-->
     <link href="~/Content/footer-distributed-with-address-and-phones.css" rel="stylesheet" />
+    <!--Link para iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -14,19 +18,22 @@
     <!--Barra de Navegación-->
     <div class="container">
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #573173;">
+            <!--Logo de la Empresa en la barra-->
             <a class="navbar-brand" href="#">
                 <img src="img/logo.png" width="30" height="30">
             </a>
+            <!--Boton con nombre de la Empresa-->
             <a class="navbar-brand">@Html.ActionLink("BWSolutions", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!--links-->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" style="align-content:center;">
                     <a class="nav-item nav-link active">@Html.ActionLink("Inicio", "Index", "Home") <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link">@Html.ActionLink("Quiénes somos", "About", "Home")</a>
-                    <a class="nav-item nav-link">@Html.ActionLink("Contacto", "Contact", "Home")</a>
                 </div>
+                <!--Registro e inicio de sesion-->
             </div>
             <div class="navbar-nav">
                 <a class="nav-item nav-link">@Html.Partial("_LoginPartial")</a>
@@ -34,52 +41,42 @@
         </nav>
     </div>
 
-    
-        @RenderBody()
-        <!--Footer-->
-        <footer class="footer-distributed">
-            <div class="footer-left">
-                <h3>Company<span>logo</span></h3>
-                <p class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">About</a>
-                    <a href="#">Faq</a>
-                    <a href="#">Contact</a>
-                </p>
-                <p class="footer-company-name">Company Name &copy; 2015</p>
-            </div>
-            <div class="footer-center">
-                <div>
-                    <i class="fa fa-map-marker"></i>
-                    <p><span>21 Revolution Street</span> Paris, France</p>
-                </div>
-                <div>
-                    <i class="fa fa-phone"></i>
-                    <p>+1 555 123456</p>
-                </div>
-                <div>
-                    <i class="fa fa-envelope"></i>
-                    <p><a href="mailto:support@company.com">support@company.com</a></p>
-                </div>
-            </div>
-            <div class="footer-right">
-                <p class="footer-company-about">
-                    <span>About the company</span>
-                    Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-                </p>
-                <div class="footer-icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
-        </footer>
-    
-        
 
+    @RenderBody()
+    <!--Footer-->
+    <!--Logo de la Empresa-->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img src="img/logo.png" width="200" height="200">
+            <p class="footer-company-name">Brightwaysolutions &copy; 2015</p>
+        </div>
+
+        <!--Información de la Empresa-->
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span> Blvd. Adolfo López Mateos 2009</span> Ciudad de México</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>55 4169 2110</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+        </div>
+
+        <!--Barra de Redes sociales-->
+        <div class="footer-right">
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/bwsolutionsIT/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://mx.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
 
 
 
